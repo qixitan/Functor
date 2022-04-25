@@ -60,14 +60,14 @@ def test1():
     X = torch.randn(inplanes, 32, 32)
     net = Conv2D(inplanes=inplanes, planes=planes, kernel_size=kernel_size)
     y = net(X)
-    print(y.shape)
+    # print(y.shape)
 
 
 def test2():
     inplanes, planes, kernel_size = 3, 4, 3
     X = np.random.randn(inplanes, 32, 32)
     y = Conv2D_np(X, inplanes, planes, kernel_size)
-    print(y.shape)
+    # print(y.shape)
 
 
 def main():
@@ -77,7 +77,7 @@ def main():
     t2 = time.time()
     test2()
     t3 = time.time()
-    print("pytorch 用时: {}; numpy 用时：{}".format(t2-t1, t3-t2))
+    print("pytorch 用时: {}; numpy 用时：{}".format(t2-t1, t3-t2))  
 
 
 if __name__ == '__main__':
